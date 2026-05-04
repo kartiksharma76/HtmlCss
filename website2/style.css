@@ -1,0 +1,73 @@
+/* Reset default margin */
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    padding:15px 40px;
+}
+
+.logo{
+    color:white;
+}
+
+.menu{
+    list-style:none;
+    display:flex;
+}
+
+.menu li{
+    margin-left:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hero Section */
+
+.hero{
+    text-align:center;
+    padding:80px;
+    background:#f4f4f4;
+}
+
+.hero button{
+    padding:10px 20px;
+    background:blue;
+    color:white;
+    border:none;
+}
+
+/* Cards Layout */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:200px;
+    text-align:center;
+    box-shadow:0 0 10px gray;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    background:#333;
+    color:white;
+    padding:15px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dual Direction Infinite Scroll</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a; /* DARK BLUE */
+    color: white;
+  }
+
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #ff6a00, #ee0979); /* GRADIENT BAR */
+    border-radius: 10px;
+  }
+
+  .scroll-track {
+    display: flex;
+    width: fit-content;
+  }
+
+  .scroll-content {
+    display: flex;
+  }
+
+  .scroll-content span {
+    margin: 0 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* LEFT → RIGHT */
+  .left {
+    animation: scrollLeft 10s linear infinite;
+  }
+
+  @keyframes scrollLeft {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* RIGHT → LEFT */
+  .right {
+    animation: scrollRight 10s linear infinite;
+  }
+
+  @keyframes scrollRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- LEFT → RIGHT -->
+<div class="scroll-container">
+  <div class="scroll-track left">
+    <div class="scroll-content">
+      <span>🔥 HTML</span>
+      <span>⚡ CSS</span>
+      <span>🚀 JS</span>
+      <span>💻 React</span>
+    </div>
+    <div class="scroll-content">
+      <span>🔥 HTML</span>
+      <span>⚡ CSS</span>
+      <span>🚀 JS</span>
+      <span>💻 React</span>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT → LEFT -->
+<div class="scroll-container">
+  <div class="scroll-track right">
+    <div class="scroll-content">
+      <span>🎯 Placement</span>
+      <span>📚 DSA</span>
+      <span>🧠 Logic</span>
+      <span>💼 Interview</span>
+    </div>
+    <div class="scroll-content">
+      <span>🎯 Placement</span>
+      <span>📚 DSA</span>
+      <span>🧠 Logic</span>
+      <span>💼 Interview</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
